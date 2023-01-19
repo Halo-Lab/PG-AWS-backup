@@ -36,7 +36,7 @@ const backupDB = async (dbName) => {
           console.log(`Local file removed: ${backupFilePath}`);
         })
 
-        await uploadFileAWS(compressFilePath, dbName);
+        await uploadFileAWS(compressFilePath, backupFolder);
       })
   } catch (err) {
     console.error(err);
